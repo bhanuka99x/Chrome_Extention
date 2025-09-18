@@ -1,0 +1,6 @@
+{
+  "manifest_version": 3,
+  "name": "Hello world",
+  "version": "1.0.0",
+  "description": "This is the first chrome extention, I build"
+}
