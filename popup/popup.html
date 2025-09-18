@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="popup.css" />
-  </head>
-  <body>
-    <div class="container m-3 flex items-center">
-      <h1 class="title">hello world</h1>
-      <div class="field">
-        <label for="" class="">Stats</label>
-        <span class="tag is-success">Running</span>
-        <span class="tag is-danger">Stopped</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Entry Drops</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
 
-      </div>
+  <div class="container">
+    <h1 class="title">Global Entry Drops</h1>
+
+    <div class="field">
+      <label class="label">Status</label>
+      <span id="runningSpan" class="tag success">Running</span>
+      <span id="stoppedSpan" class="tag danger">Stopped</span>
     </div>
-  </body>
+  </div>
+
+  <div class="container">
+
+    <div class="field">
+      <label class="label">Location ID</label>
+      <select id="locationId" class="input"></select>
+      <p id="locationIdError" class="error">Please select a valid location.</p>
+    </div>
+
+    <div class="field">
+      <label class="label">Start date</label>
+      <input type="date" id="startDate" class="input" />
+      <p id="startDateError" class="error">Please enter a valid start date.</p>
+    </div>
+
+    <div class="field">
+      <label class="label">End date</label>
+      <input type="date" id="endDate" class="input" />
+      <p id="endDateError" class="error">Please enter a valid end date.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <button id="startButton" class="btn success">Save & Start</button>
+  </div>
+
+  <div class="container">
+    <button id="stopButton" class="btn danger">Stop</button>
+  </div>
+
+  <script src="spacetime.min.js"></script>
+  <script src="popup.js"></script>
+</body>
 </html>
